@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Profile</title>
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/custom.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="">
+  <div class="crete-profile-section bg-gray-100">
+    <div class="header-area border-b border-[#eeeeee] bg-white py-[28px] pl-[128px] relative">
+      <img  src="./img/logo.png"  class="sm:w-[120px] sm:h-[25px] md:w-[175px] md:h-[25px]" alt="">
+    </div>
+    <div class="profile-all-content mt-[68px] sm:max-w-[640px] md:max-w-[768px] lg:max-w-[988px] mx-auto bg-white shadow-lg rounded-lg p-8">
+      <h1 class="text-2xl font-bold text-gray-800 mb-4 text-center sm:text-left">Create your profile</h1>
+      <p class="text-gray-600 mb-6 text-center sm:text-left">All About Personal information, Experience, education, etc.</p>
+    
+      <!-- first -->
+      <div  id="accordion-collapse" data-accordion="collapse">
+        <div class="single-collapse bg-white border border-gray-200 rounded-12px rounded-xl p-5 mt-8">
+          <h2 id="accordion-collapse-heading-1">
+            <button type="button" class="py-[12px] px-3 flex items-center justify-between w-full font-medium rtl:text-right text-gray-500 border-0  dark:hover:bg-gray-800 gap-3" data-accordion-target="#accordion-collapse-body-1" aria-expanded="true" aria-controls="accordion-collapse-body-1">
+              <p class="flex items-center">
+                <img src="./img/profile.svg" alt="" width="24" height="24">
+                <span class="pl-3">Personal Information</span>
+              </p>
+              <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
+               xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+              </svg>
+            </button>
+          </h2>
+          <div id="accordion-collapse-body-1" class="hidden" aria-labelledby="accordion-collapse-heading-1">
+            <!-- Profile Picture -->
+            <div class="back-cover-img-content relative w-full" style="background-image: url(./img/back-cover.png); background-size: cover; background-repeat: no-repeat;">
+              <button class="absolute bg-black text-white py-2 px-5 rounded-lg text-sm leading-0 flex items-center content-center"> 
+                <span><img src="./img/edit-2.svg" alt=""></span> <p class="ml-1 font-semibold">Change Image</p> </button>
+            </div>
+              <div class="profile-img relative w-[88px] h-[88px] group mt-[-50px] ml-8">
+                <!-- Avatar Image -->
+                <div class="w-full h-full rounded-full overflow-hidden border-4 border-white">
+                  <img src="./img/men.png" alt="Avatar" class="w-full h-full object-cover" />
+                </div>
+              
+                <!-- Edit Icon -->
+                <span class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                  <label for="input-file" class="cursor-pointer">
+                    <img src="./img/camera.svg" width="28px" height="28px" alt="Edit Icon" />
+                    <input id="input-file" class="hidden" type="file" name="image-upload" accept="image/*" />
+                  </label>
+                </span>
+              </div>                
+            <!-- Personal Information Form -->
+            <div class="profile-input-information mt-8">
+              <h3 class="font-bold text-[18px] leading-[23.4px] text-[#1B2124]">Personal Information</h3>
+              <!-- First and Last Name -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+                <div class="relative mb-6">
+                  <label class="block text-[#515B6F] font-semibold text-[16px] leading-[19px] mb-[12px]">
+                    First Name
+                  </label>                    
+                  <input type="text" placeholder="First Name" 
+                        class="w-full border border-gray-300 rounded  p-2 focus:outline-blue-500">
+                </div>
+                <div class="relative mb-6">
+                  <label class="block text-[#515B6F] font-semibold text-[16px] leading-[19px] mb-[12px]">
+                    Last Name
+                  </label>
+                  <input type="text" placeholder="Last Name" 
+                        class="w-full border border-gray-300 p-2 rounded focus:outline-blue-500">
+                </div>
+              </div>
+
+              <!-- About You -->
+              <div class="relative mb-6">
+                <label class="block text-[#515B6F] font-semibold text-[16px] leading-[19px] mb-[12px]">
+                  About you
+                </label>
+                <textarea  placeholder="Write something about yourself..." 
+                 class="w-full h-[80px] border border-gray-300 rounded p-2 focus:outline-blue-500"></textarea>
+              </div>
+
+              <!-- Email and Portfolio -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="relative mb-6">
+                  <label class="block text-[#515B6F] font-semibold text-[16px] leading-[19px] mb-[12px]">
+                   Email
+                  </label>                    
+                  <img class=" absolute top-10 left-3" src="./img/icon/mail.svg" width="22"/>
+                  <input type="email" placeholder="Email Address" 
+                        class="w-full border border-gray-300 rounded pl-10 p-2 focus:outline-blue-500">
+                </div>
+                <div class="relative mb-6">
+                  <label class="block text-[#515B6F] font-semibold text-[16px] leading-[19px] mb-[12px]">
+                    Portfolio Link
+                  </label>
+                  <img class=" absolute top-10 left-3" src="./img/icon/link.svg" width="22"/>
+                  <input type="url" placeholder="Portfolio URL" 
+                        class="w-full border border-gray-300 rounded pl-10 p-2 focus:outline-blue-500">
+                </div>
+              </div>
+
+              <!-- Gender -->
+              <div class="relative mb-6">
+                <label class="block text-[#515B6F] font-semibold text-[16px] leading-[19px] mb-[12px]">
+                  Gender
+                </label>
+
+                <select class="w-full border border-gray-300 rounded-lg bg-transparent p-3 focus:outline-blue-500">
+                  <option value="">Select Gender</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                </select>
+              </div>
+
+              <!-- Address -->
+              <div>
+                 <label class="block text-[#1B2124] font-bold text-[16px] mb-[12px]">
+                  Address
+                </label>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div class="relative">
+                    <label class="block text-[#515B6F] font-semibold text-[16px] leading-[19px] mb-[12px]">
+                      City / Town
+                    </label>
+                    <img class=" absolute top-10 left-3" src="./img/icon/location.svg" width="22"/>
+                    <input type="text" placeholder="City/Town" 
+                          class="w-full border border-gray-300 rounded pl-10 p-2 focus:outline-blue-500">
+                  </div>
+                  <div class="relative">
+                    <label class="block text-[#515B6F] font-semibold text-[16px] leading-[19px] mb-[12px]">
+                      Zip Code
+                    </label>
+                    <img class=" absolute top-10 left-3" src="./img/icon/location.svg" width="22"/>
+                    <input type="text" placeholder="Zip Code" 
+                          class="w-full border border-gray-300 rounded pl-10 p-2 focus:outline-blue-500">
+                  </div>
+                </div>
+                <div class="relative mt-4">
+                  <label class="block text-[#515B6F] font-semibold text-[16px] leading-[19px] mb-[12px]">
+                    Detail Address
+                  </label>
+                  <img class=" absolute top-10 left-3" src="./img/icon/location.svg" width="22"/>
+                  <input type="text" placeholder="Detail Address" 
+                        class="w-full border border-gray-300 rounded pl-10 p-2 focus:outline-blue-500">
+                </div>
+              </div>
+              <!-- Submit Button -->
+               <div class="submit-button flex justify-between items-center mt-8">
+                  <div class="flex items-center cursor-pointer">
+                    <span><img src="./img/icon/arrow-left.svg" width="18" alt=""></span>
+                    <p class="text-base ml-2 text-[#384853]">Back</p>
+                  </div>
+                  <button type="submit" class="bg-blue-500 text-white  text-sm px-5 py-2.5 rounded-md font-bold">
+                    Next
+                  </button>
+               </div>
+            </div>
+         </div>
+        </div>
+        
+        <div class="single-collapse bg-white border border-gray-200 rounded-12px rounded-xl p-5 mt-8">
+          <h2 id="accordion-collapse-heading-2">
+            <button type="button" class="py-[12px] px-3 flex items-center justify-between w-full font-medium rtl:text-right text-gray-500 border-0  dark:hover:bg-gray-800 gap-3" data-accordion-target="#accordion-collapse-body-2" aria-expanded="false" aria-controls="accordion-collapse-body-2">
+              <p class="flex items-center">
+                <img src="./img/briefcase.svg" alt="" width="24" height="24">
+                <span class="pl-3">Work Experience</span>
+              </p>
+              <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
+               xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+              </svg>
+            </button>
+          </h2>
+          <div id="accordion-collapse-body-2" class="show" aria-labelledby="accordion-collapse-heading-2">
+           <div>
+            <div class="title-and-button flex justify-between items-center mt-8">
+              <h3 class="font-bold text-[18px] leading-[23.4px] text-[#1B2124]">Work Experience</h3>
+              <button class="flex items-center border border-blue-500 text-blue-500 px-6 py-2 rounded-full transition">
+                <img src="./img/icon/plus.svg" alt="">
+                Add New
+              </button>
+            </div>
+            <div>
+              <div class="bg-white rounded-lg p-6">
+                <div class="space-y-6">
+                  <div class="flex items-start bg-white p-4 group relative">
+                    <!-- Icon -->
+                    <div class="flex-shrink-0 bg-blue-100 text-blue-500 rounded-full p-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0C5.37 0 0 5.37 0 12c0 6.63 5.37 12 12 12s12-5.37 12-12c0-6.63-5.37-12-12-12zm0 22C6.48 22 2 17.52 2 12S6.48 2 12 2s10 4.48 10 10-4.48 10-10 10zm1-15h-2v5H7v2h4v5h2v-5h4v-2h-4V7z" />
+                      </svg>
+                    </div>
+              
+                    <!-- Content -->
+                    <div class="ml-4 w-full">
+                      <div class="flex justify-between items-start">
+                        <div>
+                          <h3 class="text-base font-bold text-[#1B2124] mb-2">UI Designer</h3>
+                          <p class="text-sm font-medium text-[#696B72] mb-1">Ideologist Team - Freelance</p>
+                          <p class="text-sm font-medium text-[#696B72] mb-1">Jan 2022 - Present <span class="ml-1">8 Mos</span></p>
+                        </div>
+              
+                        <!-- Edit and Delete Icons -->
+                        <div class="flex space-x-2 absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                          <!-- Edit Button -->
+                          <button>
+                            <img src="./img/icon/edit-2.svg" alt="" width="24" height="24">
+                          </button>
+              
+                          <!-- Delete Button -->
+                          <button>
+                            <img src="./img/icon/trash.svg" alt="" width="24" height="24">
+                          </button>
+                        </div>
+                      </div>
+                      
+                      <p class="text-sm text-gray-500 mt-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>
+                    </div>
+                  </div>
+                  <div class="flex items-start bg-white p-4 group relative">
+                    <!-- Icon -->
+                    <div class="flex-shrink-0 bg-blue-100 text-blue-500 rounded-full p-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0C5.37 0 0 5.37 0 12c0 6.63 5.37 12 12 12s12-5.37 12-12c0-6.63-5.37-12-12-12zm0 22C6.48 22 2 17.52 2 12S6.48 2 12 2s10 4.48 10 10-4.48 10-10 10zm1-15h-2v5H7v2h4v5h2v-5h4v-2h-4V7z" />
+                      </svg>
+                    </div>
+              
+                    <!-- Content -->
+                    <div class="ml-4 w-full">
+                      <div class="flex justify-between items-start">
+                        <div>
+                          <h3 class="text-base font-bold text-[#1B2124] mb-2">UI Designer</h3>
+                          <p class="text-sm font-medium text-[#696B72] mb-1">Ideologist Team - Freelance</p>
+                          <p class="text-sm font-medium text-[#696B72] mb-1">Jan 2022 - Present <span class="ml-1">8 Mos</span></p>
+                        </div>
+              
+                        <!-- Edit and Delete Icons -->
+                        <div class="flex space-x-2 absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                           <!-- Edit Button -->
+                           <button>
+                            <img src="./img/icon/edit-2.svg" alt="" width="24" height="24">
+                          </button>
+                          <!-- Delete Button -->
+                          <button>
+                            <img src="./img/icon/trash.svg" alt="" width="24" height="24">
+                          </button>
+                        </div>
+                      </div>
+                      <p class="text-sm text-gray-500 mt-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- Submit Button -->
+                <div class="submit-button flex justify-between items-center mt-8">
+                  <div class="flex items-center cursor-pointer">
+                    <span><img src="./img/icon/arrow-left.svg" width="18" alt=""></span>
+                    <p class="text-base ml-2 text-[#384853]">Back</p>
+                  </div>
+                  <button type="submit" class="bg-blue-500 text-white  text-sm px-5 py-2.5 rounded-md font-bold">
+                    Continue
+                  </button>
+               </div>
+              </div>
+            </div>
+           </div>
+          </div>
+        </div>
+        <div class="single-collapse bg-white border border-gray-200 rounded-12px rounded-xl p-5 mt-8">
+          <h2 id="accordion-collapse-heading-3">
+            <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3" data-accordion-target="#accordion-collapse-body-3" aria-expanded="false" aria-controls="accordion-collapse-body-3">
+              <span>What are the differences between Flowbite and Tailwind UI?</span>
+              <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+              </svg>
+            </button>
+          </h2>
+          <div id="accordion-collapse-body-3" class="hidden" aria-labelledby="accordion-collapse-heading-3">
+          <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
+            <p class="mb-2 text-gray-500 dark:text-gray-400">The main difference is that the core components from Flowbite are open source under the MIT license, whereas Tailwind UI is a paid product. Another difference is that Flowbite relies on smaller and standalone components, whereas Tailwind UI offers sections of pages.</p>
+            <p class="mb-2 text-gray-500 dark:text-gray-400">However, we actually recommend using both Flowbite, Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you from using the best of two worlds.</p>
+            <p class="mb-2 text-gray-500 dark:text-gray-400">Learn more about these technologies:</p>
+            <ul class="ps-5 text-gray-500 list-disc dark:text-gray-400">
+              <li><a href="https://flowbite.com/pro/" class="text-blue-600 dark:text-blue-500 hover:underline">Flowbite Pro</a></li>
+              <li><a href="https://tailwindui.com/" rel="nofollow" class="text-blue-600 dark:text-blue-500 hover:underline">Tailwind UI</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</body>
+</html>

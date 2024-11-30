@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.profile-all-content .single-collapse{
+    border: 1px solid #D6DDEB;
+}

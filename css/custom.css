@@ -1,0 +1,20 @@
+.back-cover-img-content{
+    height: 150px;
+}
+
+.back-cover-img-content button{
+    bottom:20px;
+    right: 20px;
+}
+
+
+.header-area::before {
+    content: '';
+    background-color: #00CC9C; 
+    width: 288px;    
+    border-radius:25px;      
+    height: 6px;         
+    position: absolute;   
+    left: 0;               
+    bottom: -6px;              
+  }
